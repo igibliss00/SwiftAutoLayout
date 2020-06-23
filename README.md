@@ -5,7 +5,7 @@ This app demonstrates the two different ways of programmatically implementing au
 ## Installing
 
 ```
-git clone http://www.github.com/igibliss00/SwiftAutoLayout
+git clone https://www.github.com/igibliss00/SwiftAutoLayout.git
 ```
 
 ## Features
