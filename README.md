@@ -25,7 +25,7 @@ for label in viewsDictionary.keys {
 }
 view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label1]-[label2]-[label3]-[label4]-[label5]", options:[], metrics: nil, views: viewsDictionary))
 ```
-<img src="http://github.com/igibliss00/SwiftAutoLayout/blob/master/README_assets/1.png" width=400/>
+<img src="https://github.com/igibliss00/SwiftAutoLayout/blob/master/README_assets/1.png" width=400/>
 
 The initial constraints simply set the labels to be horizontally filled and spaced out evenly vertically.  And, then, progressively added a few more constraints.  
 
@@ -40,8 +40,8 @@ view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label1
 - Now that the top margin, bottom margin, and the label heights are all set, the display looks fine in a portrait mode.  However, "Unable to simultaneously satisfy constraints" message shows when the device is rotated horizontally.  This is because the height of the device is too narrow to satisfy all three constraints that’s been just set. 
 - Set the label height’s priority at 999.  Priority in constraint is a contingency plan which is to be executed in an absolute manner or in a secondary manner, depending on the priority, in the case the constraints conflict. @1000 is the absolute necessary priority, so by setting the height of the labels at @999, it’s saying that if the top margin and the bottom margin is set, but the screen is too narrow to fulfill the height of 88 points, be flexible to accommodate it. 
 
-<img src="http://github.com/igibliss00/SwiftAutoLayout/blob/master/README_assets/2.png" width=400/>
-<img src="http://github.com/igibliss00/SwiftAutoLayout/blob/master/README_assets/3.png" height=400/>
+<img src="https://github.com/igibliss00/SwiftAutoLayout/blob/master/README_assets/2.png" width=400/>
+<img src="https://github.com/igibliss00/SwiftAutoLayout/blob/master/README_assets/3.png" height=400/>
 
 
 ### Auto Layout Anchors
