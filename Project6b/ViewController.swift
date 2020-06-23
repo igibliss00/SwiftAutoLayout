@@ -64,14 +64,20 @@ class ViewController: UIViewController {
         // MARK: - Auto Layout Anchor
         
         var previous: UILabel?
+        let labels = [label1, label2, label3, label4, label5]
         
-        for label in [label1, label2, label3, label4, label5] {
+        for label in labels {
 //            label.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-            label.
-            label.heightAnchor.constraint(equalToConstant: 88).isActive = true
+            label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0).isActive = true
+            label.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0).isActive = true
+//            label.heightAnchor.constraint(equalToConstant: 88).isActive = true
+            label.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.20, constant: 10).isActive = true
             
             if let previous = previous {
                 label.topAnchor.constraint(equalTo: previous.bottomAnchor, constant: 10).isActive = true
+                if label == labels[labels.count - 1] {
+                    label.bottomAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 10).isActive = true
+                }
             } else {
                 label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
             }
